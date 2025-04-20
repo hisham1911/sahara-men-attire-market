@@ -32,7 +32,7 @@ const CollectionSection = () => {
           
           <TabsContent value="new">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {newArrivals.map(product => (
+              {newArrivals && newArrivals.map(product => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
@@ -40,7 +40,7 @@ const CollectionSection = () => {
           
           <TabsContent value="best">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {bestSellers.map(product => (
+              {bestSellers && bestSellers.map(product => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>

@@ -15,7 +15,7 @@ const HeroBanner = () => {
           alt="Elegant man in a suit"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent rtl:bg-gradient-to-l"></div>
       </div>
       
       {/* Content */}
@@ -26,7 +26,7 @@ const HeroBanner = () => {
             <span className="text-magrabi-gold">{t("quality_fabrics")}</span>
           </h1>
           <p className="text-white text-lg mb-8">
-            MAGRABI MENSWEAR - {t("magrabi_menswear")}
+            {t("magrabi_menswear")}
           </p>
           <Link to="/products">
             <Button className="bg-magrabi-gold text-black hover:bg-magrabi-gold/80 px-8 py-6 text-lg">
@@ -37,7 +37,7 @@ const HeroBanner = () => {
       </div>
       
       {/* Logo Watermark */}
-      <div className="absolute bottom-8 right-8 opacity-30">
+      <div className="absolute bottom-8 right-8 rtl:right-auto rtl:left-8 opacity-30">
         <img 
           src="/lovable-uploads/571560cd-180d-4a27-8654-5e65dfdff4c5.png" 
           alt="Magrabi Logo" 

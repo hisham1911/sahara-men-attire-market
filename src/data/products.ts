@@ -23,7 +23,7 @@ export const products: Product[] = [
     category: "formal",
     price: 1200,
     images: [
-      "/lovable-uploads/571560cd-180d-4a27-8654-5e65dfdff4c5.png",
+      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=2080&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1887&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1593032465175-481ac7f401f0?q=80&w=2080&auto=format&fit=crop"
     ],
@@ -55,8 +55,8 @@ export const products: Product[] = [
   },
   {
     id: "3",
-    name: "Premium White Shirt",
-    nameAr: "قميص أبيض فاخر",
+    name: "Egyptian Cotton Dress Shirt",
+    nameAr: "قميص رسمي من القطن المصري",
     category: "formal",
     price: 120,
     images: [
@@ -73,8 +73,8 @@ export const products: Product[] = [
   },
   {
     id: "4",
-    name: "Slim Fit Chinos",
-    nameAr: "بنطلون شينو ضيق",
+    name: "Italian Cotton Chinos",
+    nameAr: "بنطلون شينو إيطالي",
     category: "casual",
     price: 85,
     images: [
@@ -91,8 +91,8 @@ export const products: Product[] = [
   },
   {
     id: "5",
-    name: "Cashmere Sweater",
-    nameAr: "سترة كشمير",
+    name: "Premium Cashmere Sweater",
+    nameAr: "سترة كشمير فاخرة",
     category: "casual",
     price: 250,
     images: [
@@ -109,8 +109,8 @@ export const products: Product[] = [
   },
   {
     id: "6",
-    name: "Leather Belt",
-    nameAr: "حزام جلدي",
+    name: "Handcrafted Leather Belt",
+    nameAr: "حزام جلدي مصنوع يدويًا",
     category: "accessories",
     price: 75,
     images: [
@@ -127,8 +127,8 @@ export const products: Product[] = [
   },
   {
     id: "7",
-    name: "Silk Tie",
-    nameAr: "ربطة عنق حريرية",
+    name: "Italian Silk Tie",
+    nameAr: "ربطة عنق حريرية إيطالية",
     category: "accessories",
     price: 45,
     images: [
@@ -145,8 +145,8 @@ export const products: Product[] = [
   },
   {
     id: "8",
-    name: "Luxury Watch",
-    nameAr: "ساعة فاخرة",
+    name: "Swiss Automatic Watch",
+    nameAr: "ساعة سويسرية أوتوماتيكية",
     category: "accessories",
     price: 1500,
     images: [

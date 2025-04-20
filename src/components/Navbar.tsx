@@ -91,15 +91,15 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8 flex-1 justify-center">
-            <Link to="/" className="text-white hover:text-magrabi-gold transition-colors">
+          <div className="hidden lg:flex space-x-0 rtl:space-x-0 lg:space-x-8 rtl:lg:space-x-reverse flex-1 justify-center">
+            <Link to="/" className="text-white hover:text-magrabi-gold transition-colors px-3">
               {t("home")}
             </Link>
-            <Link to="/products" className="text-white hover:text-magrabi-gold transition-colors">
+            <Link to="/products" className="text-white hover:text-magrabi-gold transition-colors px-3">
               {t("products")}
             </Link>
             <DropdownMenu>
-              <DropdownMenuTrigger className="text-white hover:text-magrabi-gold transition-colors">
+              <DropdownMenuTrigger className="text-white hover:text-magrabi-gold transition-colors px-3">
                 {t("categories")}
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-black border-magrabi-gold">
@@ -123,52 +123,54 @@ const Navbar = () => {
           </div>
 
           {/* Icons */}
-          <div className="flex items-center space-x-4">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="text-white hover:text-magrabi-gold"
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-            >
-              {isSearchOpen ? <X size={20} /> : <Search size={20} />}
-            </Button>
-
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-white hover:text-magrabi-gold">
-                  <Globe size={20} />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-black border-magrabi-gold">
-                <DropdownMenuItem 
-                  onClick={() => setLanguage("ar")} 
-                  className={`cursor-pointer ${language === "ar" ? "text-magrabi-gold" : "text-white"}`}
-                >
-                  العربية
-                </DropdownMenuItem>
-                <DropdownMenuItem 
-                  onClick={() => setLanguage("en")} 
-                  className={`cursor-pointer ${language === "en" ? "text-magrabi-gold" : "text-white"}`}
-                >
-                  English
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <Button variant="ghost" size="icon" className="text-white hover:text-magrabi-gold">
-              <User size={20} />
-            </Button>
-
-            <Link to="/cart" className="relative">
-              <Button variant="ghost" size="icon" className="text-white hover:text-magrabi-gold">
-                <ShoppingCart size={20} />
+          <div className="flex items-center">
+            <div className="flex items-center space-x-1 rtl:space-x-reverse lg:space-x-4 rtl:lg:space-x-reverse">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="text-white hover:text-magrabi-gold"
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+              >
+                {isSearchOpen ? <X size={20} /> : <Search size={20} />}
               </Button>
-              {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 bg-magrabi-gold text-black rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
-                  {totalItems}
-                </span>
-              )}
-            </Link>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="text-white hover:text-magrabi-gold">
+                    <Globe size={20} />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-black border-magrabi-gold">
+                  <DropdownMenuItem 
+                    onClick={() => setLanguage("ar")} 
+                    className={`cursor-pointer ${language === "ar" ? "text-magrabi-gold" : "text-white"}`}
+                  >
+                    العربية
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => setLanguage("en")} 
+                    className={`cursor-pointer ${language === "en" ? "text-magrabi-gold" : "text-white"}`}
+                  >
+                    English
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <Button variant="ghost" size="icon" className="text-white hover:text-magrabi-gold">
+                <User size={20} />
+              </Button>
+
+              <Link to="/cart" className="relative">
+                <Button variant="ghost" size="icon" className="text-white hover:text-magrabi-gold">
+                  <ShoppingCart size={20} />
+                </Button>
+                {totalItems > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-magrabi-gold text-black rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold">
+                    {totalItems}
+                  </span>
+                )}
+              </Link>
+            </div>
           </div>
         </div>
 
